@@ -114,10 +114,10 @@ public class parser {
 
 	public boolean numCheck(String num)
 	{
-		NumberFormat formatter = NumberFormat.getInstance();
-		  ParsePosition pos = new ParsePosition(0);
-		  formatter.parse(num, pos);
-		  return  num.length() == pos.getIndex();
+		NumberFormat forma = NumberFormat.getInstance();
+		  ParsePosition posit = new ParsePosition(0);
+		  forma.parse(num, pos);
+		  return  num.length() == posit.getIndex();
 		
 	}
 	 
@@ -172,9 +172,9 @@ public class parser {
 	public String jump() {
 		if(stringFileArr[counter].contains(";"))
 		{
-			String retJump = stringFileArr[counter]; 
-			int endIndex = retJump.lastIndexOf(";");
-			return retJump.substring(endIndex+1,retJump.length());
+			String rJump = stringFileArr[counter]; 
+			int endInd = rJump.lastIndexOf(";");
+			return rJump.substring(endIndex+1,rJump.length());
 		}
 		return null;
 	}
